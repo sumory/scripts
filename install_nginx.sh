@@ -46,6 +46,8 @@ cd nginx-1.9.5
 mkdir -p $INSTALL_PATH/nginx-1.9.5
 ./configure --prefix=$INSTALL_PATH/nginx-1.9.5 --with-pcre=$DOWNLOAD_PATH/pcre-8.37 --with-zlib=$DOWNLOAD_PATH/zlib-1.2.8 --with-openssl=$DOWNLOAD_PATH/openssl-0.9.8zg
 
+make && make install
+
 
 
 
