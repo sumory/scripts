@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-OPENRESTY_VERSION="1.9.15.1"
+OPENRESTY_VERSION="1.11.2.1rc1"
 OPENRESTY_DIR=$1
 
 
@@ -19,8 +19,8 @@ tar zxvf openresty-$OPENRESTY_VERSION.tar.gz
 cd openresty-$OPENRESTY_VERSION
 
 ./configure \
-            --with-cc-opt="-I/usr/local/Cellar/pcre/8.38/include -I/usr/local/opt/openssl/include" \
-            --with-ld-opt="-L/usr/local/Cellar/pcre/8.38/lib -L/usr/local/opt/openssl/lib"  \
+            --with-cc-opt="-I/usr/local/Cellar/pcre/8.39/include -I/usr/local/opt/openssl/include" \
+            --with-ld-opt="-L/usr/local/Cellar/pcre/8.39/lib -L/usr/local/opt/openssl/lib"  \
             -j8 \
             --with-http_stub_status_module \
             --with-luajit \
