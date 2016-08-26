@@ -14,6 +14,7 @@ else
 fi
 
 
+git clone https://github.com/openresty/stream-lua-nginx-module
 wget https://openresty.org/download/openresty-$OPENRESTY_VERSION.tar.gz
 tar zxvf openresty-$OPENRESTY_VERSION.tar.gz
 cd openresty-$OPENRESTY_VERSION
@@ -24,6 +25,9 @@ cd openresty-$OPENRESTY_VERSION
             -j8 \
             --with-http_stub_status_module \
             --with-luajit \
+            --with-stream \
+            --with-stream_ssl_module \
+            --add-module=../stream-lua-nginx-module \
             --prefix="$OPENRESTY_DIR"
 make
 make install
